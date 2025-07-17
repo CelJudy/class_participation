@@ -55,11 +55,11 @@ onBeforeUnmount(() => {
                     </button>
                     
                 </div>
-                <div class="md:w-8/12 lg:w-4/12" v-if="login">
+                <div class="w-full md:w-8/12 lg:w-4/12" v-if="login">
                     <p class="subtitle-text mb-3">Escribe tu respuesta</p>
                     <textarea
                         v-model="answer"
-                        class="form-input w-full rounded-md px-4 py-2 border focus:outline-none focus:ring-2 bg-gray-800 text-white border-gray-600 text-lg"
+                        class="form-input w-full h-96 rounded-md px-4 py-2 border focus:outline-none focus:ring-2 bg-gray-800 text-white border-gray-600 text-lg"
                     />
                     <button
                         class="mt-5 w-full flex items-center justify-center rounded-md focus:outline-none transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 px-4 py-2 text-white text-base"
