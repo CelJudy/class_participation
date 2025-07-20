@@ -1,12 +1,12 @@
 import axios from "axios";
 
 //const ip="http://localhost:3000/api/";
-const ip="http://192.168.1.11:3000/api/";
+const ip="http://192.168.1.101:3000/api/";
 
 export const saveAnswer=async(data)=>{
     try{
         const options={
-            url:`${ip}respuestas/guardar`,
+            url:`${ip}ejercicios/guardar`,
             method:"POST",
             headers:{
                 'Content-Type':'application/json',
@@ -19,10 +19,11 @@ export const saveAnswer=async(data)=>{
         console.log(error);
     }
 }
+
 export const selectAnswerNum=async(id)=>{
     try{
         const options={
-            url:`${ip}respuestas/validar`,
+            url:`${ip}ejercicios/validar`,
             method:"GET",
             headers:{
                 'Content-Type':'application/json',
@@ -38,7 +39,7 @@ export const selectAnswerNum=async(id)=>{
 export const selectAnswers=async(id)=>{
     try{
         const options={
-            url:`http://localhost:3000/api/select/column/respuestasalumnos/pregunta/${id}`,
+            url:`${ip}ejercicios/respuestas/${id}`,
             method:"GET",
             headers:{
                 'Content-Type':'application/json',
